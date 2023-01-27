@@ -6,7 +6,7 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log("Its working")
+    setItems(data)
   }
   return (
     <div className="section-center">
@@ -18,7 +18,11 @@ function App() {
         <input type='number' name='amount' value={count} onChange={(e) => setCount(e.target.value)}/>
         <button type='submit' className='btn'>Generate</button>
       </form>
-      
+      {items.map((index, item) => {
+        return (
+          <p key={index}>{item}</p>
+        )
+      })}
     </div>
   )
 }
