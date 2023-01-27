@@ -4,6 +4,10 @@ function App() {
   const [count, setCount] = useState(0)
   const [items, setItems] = useState([])
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log("Its working")
+  }
   return (
     <div className="section-center">
       <h3>Tired of boring Lorem Ipsum</h3>
