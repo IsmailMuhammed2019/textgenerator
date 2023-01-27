@@ -7,6 +7,12 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault()
     let amount = parseInt(count)
+    if(count <= 0) {
+      amount = 1
+    }
+    if (count > 8) {
+      amount = items.lenght
+    }
     setItems(data.slice(0, amount))
   }
   return (
