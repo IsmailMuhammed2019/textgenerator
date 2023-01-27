@@ -6,7 +6,8 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    setItems(data)
+    let amount = parseInt(count)
+    setItems(data.slice(0, amount))
   }
   return (
     <div className="section-center">
