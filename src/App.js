@@ -18,11 +18,13 @@ function App() {
         <input type='number' name='amount' value={count} onChange={(e) => setCount(e.target.value)}/>
         <button type='submit' className='btn'>Generate</button>
       </form>
-      {items.map((index, item) => {
+      <article className='lorem-text'>
+      {items.map((item, index) => {
         return (
           <p key={index}>{item}</p>
         )
       })}
+      </article>
     </div>
   )
 }
